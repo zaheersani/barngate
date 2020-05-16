@@ -25,6 +25,12 @@ Route::post('/register', 'UsersController@createRegistro')->name('registro.creat
 Route::post('/ajaxLogin', 'UsersController@ajaxLogin')->name('ajaxLogin');
 Route::get('logout', 'Auth\LoginController@logout')->name('logout.get');
 
+Route::get('login/facebook', 'Auth\LoginController@redirectToFacebook'); //by vv
+Route::get('login/facebook/callback', 'Auth\LoginController@handleFacebookCallback'); //by vv
+
+Route::get('login/google', 'Auth\LoginController@redirectToGoogle');
+Route::get('callback/google', 'Auth\LoginController@handleGoogleCallback');
+
 //Sale
 Route::get('/sale', 'SaleController@create')->name('sale');
 Route::post('/sale.store', 'SaleController@store')->name('sale.store');
@@ -78,3 +84,11 @@ Route::get('/privacy-policy', 'PageEstaticController@showPrivacy')->name('privac
 Route::get('/about', 'PageEstaticController@showAbout')->name('about');
 Route::get('/contact-us', 'PageEstaticController@showContact')->name('contact');
 
+
+Route::get('/clear-cache', function () {
+	Artisan::call('cache:clear');
+	Artisan::call('config:clear');
+	Artisan::call('config:cache');
+	Artisan::call('view:clear');
+	return "Cache is cleared";
+});

@@ -8,17 +8,17 @@
 
 <meta name="description" content="@yield('description')">
 {{-- <link rel="stylesheet" href="css/app.css"> --}}
-<link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
-<link rel="stylesheet" href="/css/style.css" >
-<link rel="stylesheet" type="text/css" href="/css/message.css">	
-<link href="/mmenu/jquery.mmenu.all.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap.css')}}">
+<link rel="stylesheet" href="{{asset('css/style.css')}}" >
+<link rel="stylesheet" type="text/css" href="{{asset('css/message.css')}}">	
+<link href="{{asset('mmenu/jquery.mmenu.all.css')}}" rel="stylesheet">
 @yield("css-content")
 <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
-<link href="/slick/slick.css" rel="stylesheet">
-<link href="/slick/slick-theme.css" rel="stylesheet">
+<link href="{{asset('slick/slick.css')}}" rel="stylesheet">
+<link href="{{asset('slick/slick-theme.css')}}" rel="stylesheet">
     
-<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="{{asset('images/favicon.png')}}" />
 
 
 @guest
@@ -285,8 +285,12 @@
 					<input type="text" class="input" name="username" placeholder="Username (what others see when you comment)">
 					<input type="password" class="input" name="password_register" placeholder="Password">
 					<input type="password" class="input" name="password_confirmation" placeholder="Confirm Password">
-					<div class="g-recaptcha" data-sitekey="6LcFBegUAAAAAKqmPunoAQBuCrgWjVxAezHO2_D2"></div>
+					<div class="g-recaptcha" data-sitekey="6LfHU_cUAAAAAMa1GEG3lDzKu-eZJU_FM_vNLSkL"></div>
 					<input class="enviar register-send" type="submit" value="Register >">
+					<hr>
+					<a class="btn btn-facebook" href="{{url('login/facebook')}}"><i class="fab fa-facebook-f pr-1"></i> Register via Facebook</a>
+					<a class="btn btn-googleplus" href="{{url('login/google')}}"><i class="fab fa-google pr-1"></i> Register via Google</a>
+					
 				</form>
 				<a class="link" href="/privacy-policy">Privacy policy</a>
 			</div> <!-- /container-form -->
@@ -306,6 +310,9 @@
 					<input type="text" class="input" name="email_login" placeholder="Email">
 					<input type="password" class="input" name="password" placeholder="Password">
 					<input class="enviar login_send" type="submit" value="Log in">
+					<hr>
+					<a class="btn btn-facebook" href="{{url('login/facebook')}}"><i class="fab fa-facebook-f pr-1"></i> Login via Facebook</a>
+					<a class="btn btn-googleplus" href="{{url('login/google')}}"><i class="fab fa-google pr-1"></i> Login via Google</a>
 				</form>
 				<a class="link" href="/password/reset">Forgot your password?</a>
 			</div> <!-- /container-form -->
@@ -331,10 +338,10 @@
 
 @yield("js-content")
 
-<script src="/mmenu/jquery.mmenu.all.js"></script>
-<script src="/slick/slick.js"></script>
+<script src="{{asset('mmenu/jquery.mmenu.all.js')}}"></script>
+<script src="{{asset('slick/slick.js')}}"></script>
 <script src="https://js.pusher.com/5.1/pusher.min.js"></script>
-<script type="text/javascript" src="/js/main.js"></script>
+<script type="text/javascript" src="{{asset('js/main.js')}}"></script>
 @yield("js-content_main")
 
 </body>
