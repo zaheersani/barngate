@@ -288,9 +288,10 @@
 					<div class="g-recaptcha" data-sitekey="6LfHU_cUAAAAAMa1GEG3lDzKu-eZJU_FM_vNLSkL"></div>
 					<input class="enviar register-send" type="submit" value="Register >">
 					<hr>
+					<div class="btn-group" role="group">
 					<a class="btn btn-facebook" href="{{url('login/facebook')}}"><i class="fab fa-facebook-f pr-1"></i> Register via Facebook</a>
 					<a class="btn btn-googleplus" href="{{url('login/google')}}"><i class="fab fa-google pr-1"></i> Register via Google</a>
-					
+</div>
 				</form>
 				<a class="link" href="/privacy-policy">Privacy policy</a>
 			</div> <!-- /container-form -->
@@ -311,8 +312,10 @@
 					<input type="password" class="input" name="password" placeholder="Password">
 					<input class="enviar login_send" type="submit" value="Log in">
 					<hr>
+					<div class="btn-group" role="group">
 					<a class="btn btn-facebook" href="{{url('login/facebook')}}"><i class="fab fa-facebook-f pr-1"></i> Login via Facebook</a>
 					<a class="btn btn-googleplus" href="{{url('login/google')}}"><i class="fab fa-google pr-1"></i> Login via Google</a>
+</div>
 				</form>
 				<a class="link" href="/password/reset">Forgot your password?</a>
 			</div> <!-- /container-form -->

@@ -34,13 +34,13 @@ return [
         'secret' => env('SPARKPOST_SECRET'),
     ],
     'facebook' => [
-        'client_id' => '995629410859662',
-        'client_secret' => '7568b032b9460a1f5def84193d52ea0f',
-        'redirect' => 'https://barngate.salebybrands.com/login/facebook/callback'
+        'client_id' => '',
+        'client_secret' => '',
+        'redirect' => ''
     ],
     'google' => [
-        'client_id' => '53290345346-mv6ulhuv6u81ctd6mjre9q4l9sq9ts2t.apps.googleusercontent.com',
-        'client_secret' => 'zXwj1BwYom65czvtqJaC0Iqq',
+        'client_id' => '',
+        'client_secret' => '',
         'redirect' => 'https://barngate.salebybrands.com/callback/google'
     ]
 
